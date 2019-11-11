@@ -292,17 +292,6 @@ F 3 "~" H 1050 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Crystal_GND24 Y1
-U 1 1 5D87A070
-P 2250 1550
-F 0 "Y1" H 2050 1500 50  0000 L CNN
-F 1 "1MHz" H 1900 1400 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 2250 1550 50  0001 C CNN
-F 3 "~" H 2250 1550 50  0001 C CNN
-	1    2250 1550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5D87B769
 P 3450 6550
@@ -1231,8 +1220,6 @@ F 3 "" H 2250 1250 50  0001 C CNN
 	1    2250 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 1350 2250 1250
 $Comp
 L power:GND #PWR06
 U 1 1 5DDA53F5
@@ -1244,8 +1231,6 @@ F 3 "" H 2250 1800 50  0001 C CNN
 	1    2250 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 1800 2250 1750
 Wire Wire Line
 	7450 5100 7450 5000
 Wire Wire Line
@@ -1504,6 +1489,22 @@ Wire Wire Line
 Connection ~ 4000 6400
 Wire Wire Line
 	4300 6700 4000 6700
+Connection ~ 4000 6700
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 5D87A070
+P 2250 1550
+F 0 "Y1" H 2050 1500 50  0000 L CNN
+F 1 "1MHz" H 1900 1400 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 2250 1550 50  0001 C CNN
+F 3 "~" H 2250 1550 50  0001 C CNN
+	1    2250 1550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2250 1750 2250 1800
+Wire Wire Line
+	2250 1250 2250 1350
 Wire Bus Line
 	7250 2600 7250 4800
 Wire Bus Line
@@ -1520,5 +1521,4 @@ Wire Bus Line
 	3250 2300 3250 4800
 Wire Bus Line
 	5150 2300 5150 4800
-Connection ~ 4000 6700
 $EndSCHEMATC
