@@ -6,7 +6,7 @@
     (tracks 780)
     (zones 0)
     (modules 26)
-    (nets 65)
+    (nets 66)
   )
 
   (page A4)
@@ -155,6 +155,7 @@
   (net 62 "Net-(DS1-Pad3)")
   (net 63 "Net-(DS1-Pad4)")
   (net 64 "Net-(DS1-Pad5)")
+  (net 65 "Net-(Y1-Pad1)")
 
   (net_class Default "This is the default net class."
     (clearance 0.2)
@@ -227,6 +228,7 @@
     (add_net "Net-(IC4-Pad5)")
     (add_net "Net-(IC4-Pad6)")
     (add_net "Net-(RV1-Pad3)")
+    (add_net "Net-(Y1-Pad1)")
   )
 
   (module Package_DIP:DIP-14_W7.62mm_LongPads (layer F.Cu) (tedit 5DC9EBE0) (tstamp 5DC36650)
@@ -264,7 +266,8 @@
       (net 3 +5V))
     (pad 8 thru_hole oval (at 7.62 15.24 90) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 43 "Net-(IC1-Pad37)"))
-    (pad 1 thru_hole rect (at 0 0 90) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask))
+    (pad 1 thru_hole rect (at 0 0 90) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask)
+      (net 65 "Net-(Y1-Pad1)"))
     (model ${KISYS3DMOD}/Package_DIP.3dshapes/DIP-14_W7.62mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
