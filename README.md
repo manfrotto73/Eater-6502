@@ -1,5 +1,5 @@
 # Eater-6502
-This is a KiCad project that follows Ben Eater's 6502 video series. I designed the PCB from Ben's schematic.
+This is a KiCad project that follows Ben Eater's 6502 video series (https://eater.net/6502). I designed the PCB from Ben's schematic.
 
 DISCLAIMER: I am not an EE or a professional PCB designer. I am just a hobbyist who enjous tinkering w/ electronics and computers. I have no formal training.
 
