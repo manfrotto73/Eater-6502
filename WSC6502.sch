@@ -84,17 +84,6 @@ F 11 "" H 2500 1400 50  0001 L CNN "RS Price/Stock"
 $EndComp
 $Comp
 L 74xx:74HC00 U1
-U 2 1 5D861CC6
-P 6250 5450
-F 0 "U1" H 6250 5775 50  0000 C CNN
-F 1 "74HC00" H 6250 5684 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6250 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6250 5450 50  0001 C CNN
-	2    6250 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U1
 U 3 1 5D86846C
 P 3750 5250
 F 0 "U1" H 3750 5575 50  0000 C CNN
@@ -723,9 +712,7 @@ Entry Wire Line
 	1050 5250 1150 5350
 Text Label 1150 5350 0    50   ~ 0
 a15
-Entry Wire Line
-	5650 5250 5750 5350
-Text Label 5750 5350 0    50   ~ 0
+Text Label 5850 5150 0    50   ~ 0
 a14
 NoConn ~ 1450 2200
 NoConn ~ 1450 2400
@@ -996,21 +983,21 @@ F 3 "~" H 1150 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 9100 3100 0    50   ~ 0
-DS1-D1
+PB1-DS1-D1
 Text Label 9100 3200 0    50   ~ 0
-DS1-D0
+PB0-DS1-D0
 Text Label 9100 3000 0    50   ~ 0
-DS1-D2
+PB2-DS1-D2
 Text Label 9100 2900 0    50   ~ 0
-DS1-D3
+PB3-DS1-D3
 Text Label 9100 2800 0    50   ~ 0
-DS1-D4
+PB4-DS1-D4
 Text Label 9100 2700 0    50   ~ 0
-DS1-D5
+PB5-DS1-D5
 Text Label 9100 2600 0    50   ~ 0
-DS1-D6
+PB6-DS1-D6
 Text Label 9100 2500 0    50   ~ 0
-DS1-D7
+PB7-DS1-D7
 Text Label 9100 2000 0    50   ~ 0
 DS1-Ena
 Text Label 9100 2200 0    50   ~ 0
@@ -1281,8 +1268,6 @@ Wire Wire Line
 	4000 1900 4000 1700
 Wire Wire Line
 	5850 1900 5850 1750
-Wire Bus Line
-	7250 4800 5650 4800
 Connection ~ 3250 4800
 Wire Bus Line
 	3250 4800 2950 4800
@@ -1432,15 +1417,6 @@ Wire Wire Line
 	5200 3950 5200 5250
 Wire Wire Line
 	5200 5250 4050 5250
-Wire Bus Line
-	5650 4800 5650 5250
-Connection ~ 5650 4800
-Wire Bus Line
-	5650 4800 5150 4800
-Wire Wire Line
-	5950 5350 5750 5350
-Wire Wire Line
-	5950 5550 3300 5550
 Wire Wire Line
 	3300 5550 3300 5350
 Connection ~ 3300 5350
@@ -1554,10 +1530,6 @@ Wire Wire Line
 	5050 1200 6900 1200
 Wire Wire Line
 	7600 2400 7050 2400
-Wire Wire Line
-	7050 5450 6550 5450
-Wire Wire Line
-	7050 2400 7050 5450
 Wire Wire Line
 	7600 3500 7500 3500
 Wire Wire Line
@@ -2090,7 +2062,7 @@ L Connector:Conn_01x01_Male J5
 U 1 1 5EEB5212
 P 7200 2100
 F 0 "J5" V 7256 2144 50  0000 L CNN
-F 1 "R~W TP" V 7354 2144 50  0000 L CNN
+F 1 "R~W~ TP" V 7354 2144 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7200 2100 50  0001 C CNN
 F 3 "~" H 7200 2100 50  0001 C CNN
 	1    7200 2100
@@ -2182,6 +2154,56 @@ Wire Bus Line
 Connection ~ 6750 1350
 Wire Bus Line
 	6750 1350 10050 1350
+Text GLabel 4350 6050 1    50   Input ~ 0
+PB7-DS1-D7
+Text GLabel 4650 6050 1    50   Input ~ 0
+PB6-DS1-D6
+Text GLabel 4950 6050 1    50   Input ~ 0
+PB5-DS1-D5
+Text GLabel 5250 6050 1    50   Input ~ 0
+PB4-DS1-D4
+Text GLabel 5550 6050 1    50   Input ~ 0
+PB3-DS1-D3
+Text GLabel 5850 6050 1    50   Input ~ 0
+PB2-DS1-D2
+Text GLabel 6150 6050 1    50   Input ~ 0
+PB1-DS1-D1
+Text GLabel 6450 6050 1    50   Input ~ 0
+PB0-DS1-D0
+$Comp
+L 74xx:74HC00 U1
+U 2 1 5D861CC6
+P 6300 5200
+F 0 "U1" H 6300 5525 50  0000 C CNN
+F 1 "74HC00" H 6300 5434 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6300 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6300 5200 50  0001 C CNN
+	2    6300 5200
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	5150 4800 5750 4800
+Wire Bus Line
+	5750 4800 5750 5050
+Connection ~ 5750 4800
+Wire Bus Line
+	5750 4800 7250 4800
+Entry Wire Line
+	5750 5050 5850 5150
+Wire Wire Line
+	5850 5150 6000 5150
+Wire Wire Line
+	6000 5150 6000 5100
+Wire Wire Line
+	6000 5300 4050 5300
+Wire Wire Line
+	4050 5300 4050 5550
+Wire Wire Line
+	4050 5550 3300 5550
+Wire Wire Line
+	6600 5200 7050 5200
+Wire Wire Line
+	7050 5200 7050 2400
 Wire Bus Line
 	7250 2600 7250 4550
 Wire Bus Line
@@ -2202,20 +2224,4 @@ Wire Bus Line
 	5150 2300 5150 4800
 Wire Bus Line
 	9900 4550 9900 6150
-Text GLabel 4350 6050 1    50   Input ~ 0
-DS1-D7
-Text GLabel 4650 6050 1    50   Input ~ 0
-DS1-D6
-Text GLabel 4950 6050 1    50   Input ~ 0
-DS1-D5
-Text GLabel 5250 6050 1    50   Input ~ 0
-DS1-D4
-Text GLabel 5550 6050 1    50   Input ~ 0
-DS1-D3
-Text GLabel 5850 6050 1    50   Input ~ 0
-DS1-D2
-Text GLabel 6150 6050 1    50   Input ~ 0
-DS1-D1
-Text GLabel 6450 6050 1    50   Input ~ 0
-DS1-D0
 $EndSCHEMATC
