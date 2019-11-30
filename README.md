@@ -8,3 +8,4 @@ The clock has a jumper for access to the internal 1MHz crystal or you can remove
 There is access to the 8 port "B" lines of the 6522 to attach LED's or a oscilloscope to decode the LCD data if needed. There is a footprint for a current limiting resistor pack (220R) so the LED's will not draw too much current.
 I intend to socket all IC's and LED's for ease of troubleshooting or ROM update. Also the LED's are only for the first couple of programs.
 Enjoy!
+11/29/2019 Schematic and PCB updated to pull the RDY pin high to +5V
