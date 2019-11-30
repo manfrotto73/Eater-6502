@@ -1,4 +1,4 @@
-update=11/26/2019 8:54:08 AM
+update=11/29/2019 9:41:00 PM
 version=1
 last_client=kicad
 [general]
@@ -239,7 +239,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=./
+PlotDirectoryName=C:/Users/rbruno.PPIMA-8243BXJ/Documents/KiCad/WSC6502/WSC6502/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

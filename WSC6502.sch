@@ -721,7 +721,6 @@ NoConn ~ 1450 2800
 NoConn ~ 2650 2700
 NoConn ~ 2650 2600
 NoConn ~ 2650 2400
-NoConn ~ 2650 2300
 NoConn ~ 8700 2300
 NoConn ~ 8700 2400
 $Comp
@@ -1514,9 +1513,7 @@ Connection ~ 10900 3500
 Wire Wire Line
 	10900 3500 10900 3550
 Wire Wire Line
-	7600 2300 7200 2300
-Wire Wire Line
-	6900 2300 6900 1200
+	6900 2300 6900 1950
 Wire Wire Line
 	2900 2800 2650 2800
 Wire Wire Line
@@ -2047,8 +2044,6 @@ F 3 "~" H 7100 1950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 6900 1950
-Wire Wire Line
-	7200 2300 6900 2300
 Connection ~ 1200 1000
 Connection ~ 1500 1000
 Wire Wire Line
@@ -2200,6 +2195,33 @@ Wire Wire Line
 	6350 5550 6350 5350
 Wire Wire Line
 	3300 5550 6350 5550
+Text Label 7050 2400 0    50   ~ 0
+~CS2~
+Text Label 5200 3950 0    50   ~ 0
+~CE~
+Text Label 2700 2500 0    50   ~ 0
+CLK
+Text Label 6900 2300 0    50   ~ 0
+R~W~
+Text Label 1350 2050 0    50   ~ 0
+~IRQ~
+$Comp
+L power:+5V #PWR0106
+U 1 1 5E647713
+P 2800 2300
+F 0 "#PWR0106" H 2800 2150 50  0001 C CNN
+F 1 "+5V" H 2815 2473 50  0000 C CNN
+F 2 "" H 2800 2300 50  0001 C CNN
+F 3 "" H 2800 2300 50  0001 C CNN
+	1    2800 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1950 6900 1200
+Wire Wire Line
+	6900 2300 7600 2300
+Wire Wire Line
+	2650 2300 2800 2300
 Wire Bus Line
 	7250 2600 7250 4550
 Wire Bus Line
@@ -2220,14 +2242,4 @@ Wire Bus Line
 	5150 2300 5150 4800
 Wire Bus Line
 	9900 4550 9900 6150
-Text Label 7050 2400 0    50   ~ 0
-~CS2~
-Text Label 5200 3950 0    50   ~ 0
-~CE~
-Text Label 2700 2500 0    50   ~ 0
-CLK
-Text Label 6900 2300 0    50   ~ 0
-R~W~
-Text Label 1350 2050 0    50   ~ 0
-~IRQ~
 $EndSCHEMATC
